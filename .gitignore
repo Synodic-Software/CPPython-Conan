@@ -1,0 +1,23 @@
+#Project
+TestResults/
+
+#Visual Studio
+*.sln
+*.pyproj
+
+#Python
+*.egg-info
+*.pyc
+dist/
+.vs/
+
+#PDM
+.pdm.toml
+__pypackages__/
+
+#VisualStudioCode
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json

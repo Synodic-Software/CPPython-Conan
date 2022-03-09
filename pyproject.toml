@@ -1,0 +1,47 @@
+[tool.poetry]
+description = ""
+name = "cppython-conan"
+version = "0.1.0"
+
+license = "MIT"
+
+authors = [
+  "Synodic Software",
+]
+
+readme = "README.md"
+
+homepage = "https://github.com/Synodic-Software/CPPython-Conan"
+repository = "https://github.com/Synodic-Software/CPPython-Conan"
+
+[tool.poetry.dependencies]
+conan = "^1.39.0"
+cppython = {path = "../CPPython/", develop = true}
+python = "^3.9"
+
+[tool.poetry.group.dev.dependencies]
+black = {version = "^21.7b0", allow-prereleases = true}
+pylint = "^2.9.6"
+pytest = "^6.2.4"
+pytest-cov = "^2.12.1"
+pytest-mock = "^3.6.1"
+pytest-xdist = "^2.3.0"
+
+[tool.pytest.ini_options]
+addopts = "-n auto"
+testpaths = [
+  "tests",
+]
+
+[tool.black]
+line-length = 120
+
+[tool.pylint.messages_control]
+disable = "C0330, C0326"
+
+[tool.pylint.format]
+max-line-length = "120"
+
+[build-system]
+build-backend = "poetry.core.masonry.api"
+requires = ["poetry>=1.1.7"]
