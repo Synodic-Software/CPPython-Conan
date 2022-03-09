@@ -16,9 +16,10 @@ repository = "https://github.com/Synodic-Software/CPPython-Conan"
 
 [tool.poetry.dependencies]
 conan = "^1.39.0"
+cppython = {path = "../CPPython/", develop = true}
 python = "^3.9"
 
-[tool.poetry.dev-dependencies]
+[tool.poetry.group.dev.dependencies]
 black = {version = "^21.7b0", allow-prereleases = true}
 pylint = "^2.9.6"
 pytest = "^6.2.4"
