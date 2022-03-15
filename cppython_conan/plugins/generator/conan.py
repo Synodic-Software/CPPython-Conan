@@ -1,17 +1,5 @@
-# Plugin
-from cleo.events.console_events import COMMAND
-from cleo.events.console_command_event import ConsoleCommandEvent
-from cleo.events.event_dispatcher import EventDispatcher
-from poetry.console.application import Application
-from poetry.plugins.application_plugin import ApplicationPlugin
-
-# Commands
-from poetry.console.commands.install import InstallCommand
-from poetry.console.commands.update import UpdateCommand
-from poetry.console.commands.check import CheckCommand
-
 # CPPython
-from cppython.schema import Interface, PEP621
+from cppython_core.schema import Interface, PEP621
 from cppython.project import Project
 
 
