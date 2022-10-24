@@ -9,7 +9,6 @@ class CPPythonApplication(ApplicationPlugin):
     """
 
     def __init__(self):
-
         self._available_commands = {
             InstallCommand: self._install,
             UpdateCommand: self._update,
@@ -49,12 +48,10 @@ class CPPythonApplication(ApplicationPlugin):
 
 
 class PoetryPlugin(Interface):
-
     @staticmethod
     def valid(data: dict) -> bool:
         return "tool" in data and "poetry" in data["tool"]
 
     def gather_pep_612(self, data: dict) -> PEP621:
-
         poetry_data = data["tool"]["poetry"]
         return PEP621(**poetry_data)
