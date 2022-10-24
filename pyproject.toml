@@ -2,7 +2,7 @@
 description = ""
 name = "cppython-conan"
 
-license-expression = "MIT"
+license = "MIT"
 
 authors = [
   {name = "Synodic Software", email = "contact@synodic.software"},
