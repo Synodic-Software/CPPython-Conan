@@ -16,7 +16,7 @@ requires-python = ">=3.11"
 
 dependencies = [
   "cppython-core>=0.3.3.dev0",
-  "conan>=1.52.0",
+  "conan>=2.0.0-beta4",
 ]
 
 [project.license-files]
