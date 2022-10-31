@@ -41,8 +41,8 @@ test = [
 ]
 
 # Plugin registration
-[project.entry-points."cppython.generator"]
-cmake = "cppython_conan.conan:CPPythonApplication"
+[project.entry-points."cppython.provider"]
+cmake = "cppython_conan.plugin:ConanProvider"
 
 [tool.pdm.scripts]
 analyze = {shell = "pylint --verbose cppython_conan tests"}
@@ -67,7 +67,6 @@ profile = "black"
 skip_gitignore = true
 
 [tool.mypy]
-exclude = "__pypackages__"
 plugins = ["pydantic.mypy"]
 show_error_codes = true
 strict = true
