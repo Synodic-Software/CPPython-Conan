@@ -57,7 +57,7 @@ class ConanProvider(Provider):
             _description_
         """
 
-        return True
+        return bool(path)
 
     def install(self) -> None:
         """_summary_"""
