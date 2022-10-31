@@ -12,67 +12,54 @@ class ConanProvider(Provider):
 
     @staticmethod
     def name() -> str:
-        """_summary_
+        """Name token
 
         Returns:
-            _description_
+            The name
         """
         return "conan"
 
     def activate(self, data: dict[str, Any]) -> None:
-        """_summary_
+        """Called when the data is ready
 
         Args:
-            data: _description_
+            data: The configuration data
         """
 
     def sync_data(self, name: str) -> SyncData:
-        """_summary_
+        """Generates Sync data
 
         Args:
-            name: _description_
+            name: The generator name
 
         Returns:
-            _description_
+            The sync data
         """
 
         return SyncData(name=self.name(), data=None)
 
     @classmethod
     async def download_tooling(cls, path: Path) -> None:
-        """_summary_
+        """Downloads tooling if needed
 
         Args:
-            path: _description_
+            path: The location to download to
         """
-
-    @classmethod
-    def tooling_downloaded(cls, path: Path) -> bool:
-        """_summary_
-
-        Args:
-            path: _description_
-
-        Returns:
-            _description_
-        """
-
-        return bool(path)
 
     def install(self) -> None:
-        """_summary_"""
+        """Install API"""
 
     def supports_generator(self, name: str) -> bool:
-        """_summary_
+        """Returns whether the input generator token is supported
 
         Args:
-            name: _description_
+            name: The generator name
 
         Returns:
-            _description_
+            The query result
         """
 
         return name == "cmake"
 
     def update(self) -> None:
-        """_summary_"""
+        """Update API"""
