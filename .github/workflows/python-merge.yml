@@ -1,12 +1,13 @@
-name: Publish Python Package
+name: Update Python Development Release
 on:
-  release:
-    types: [published]
+  push: 
+    branches: 
+      - '**'
 
 jobs:
   publish_release:
     if: github.repository_owner == 'Synodic-Software'
-    uses: synodic-software/.github/.github/workflows/python-publish.yml@stable
+    uses: synodic-software/.github/.github/workflows/python-merge.yml@stable
     with:
       repository_url: https://upload.pypi.org/legacy/
     secrets:
