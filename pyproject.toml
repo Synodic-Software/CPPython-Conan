@@ -1,5 +1,5 @@
 [project]
-description = ""
+description = "Conan provider for CPPython"
 name = "cppython-conan"
 
 license = "MIT"
@@ -15,8 +15,8 @@ dynamic = ["version"]
 requires-python = ">=3.11"
 
 dependencies = [
-  "cppython>=0.4.1",
-  "conan>=1.46.0",
+  "cppython-core>=0.3.3.dev0",
+  "conan>=1.52.0",
 ]
 
 [project.license-files]
@@ -25,6 +25,9 @@ paths = ["LICENSE.md"]
 [project.urls]
 homepage = "https://github.com/Synodic-Software/CPPython-Conan"
 repository = "https://github.com/Synodic-Software/CPPython-Conan"
+
+[tool.pdm]
+version = {use_scm = true}
 
 [tool.pdm.dev-dependencies]
 lint = [
